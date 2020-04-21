@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">YesNo</string>
+
+    <!--<string name="title">Let me make\nthe Yes-No decision!</string>-->
+    <string name="titleQuestion">You ask,\nI answer Yes or No...\nor Maybe !</string>
+    <string name="titleAnswer">And I say...</string>
+    <string name="question_symbol">\?</string>
+    <string name="button_answer">Answer </string>
+    <string name="button_clear">Clear</string>
+
+
+    <string name="warn_msg_no_network_show_local_gif">This is a local Gif because a network error.</string>
+    <string name="error_msg_no_network_no_local_gif">Error, no possible to show Gif.</string>
+</resources>
