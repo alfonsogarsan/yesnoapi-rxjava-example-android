@@ -4,7 +4,7 @@ import com.alfgarsan.android.mvvmrxyesno.model.domain.Answer
 import io.reactivex.Observable
 import retrofit2.http.GET
 
-interface AnswerService {
+interface AnswerApiService {
 
     @GET("/api")
     fun getAnswer(): Observable<Answer>

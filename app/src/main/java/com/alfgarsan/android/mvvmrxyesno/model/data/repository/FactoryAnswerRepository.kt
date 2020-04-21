@@ -1,6 +1,6 @@
 package com.alfgarsan.android.mvvmrxyesno.model.data.repository
 
-import com.alfgarsan.android.mvvmrxyesno.model.data.api.AnswerService
+import com.alfgarsan.android.mvvmrxyesno.model.data.api.AnswerApiService
 import com.alfgarsan.android.mvvmrxyesno.model.data.api.RetrofitClient
 
 object FactoryAnswerRepository {
@@ -10,7 +10,7 @@ object FactoryAnswerRepository {
     fun getAnswerRepo() : AnswerRepository {
         if (answerRepoImpl== null){
             answerRepoImpl = AnswerRepositoryImpl(
-                answerService = RetrofitClient.getService(AnswerService::class.java)
+                answerApiService = RetrofitClient.getService(AnswerApiService::class.java)
             )
         }
         return  answerRepoImpl as AnswerRepository

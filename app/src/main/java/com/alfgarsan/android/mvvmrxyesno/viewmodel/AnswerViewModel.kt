@@ -10,7 +10,7 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 
 class AnswerViewModel (
-    private val answerRepo: AnswerRepository
+    private val answerRepository: AnswerRepository
 ): ViewModel() {
 
     private var disposable: Disposable? = null
@@ -27,11 +27,11 @@ class AnswerViewModel (
 
     fun loadAnswer() {
         disposable =
-            answerRepo.getAnswer()
+            answerRepository.getAnswer()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
-                    { data -> answer.setValue(Result.Success(data))},
+                    { value -> answer.setValue(Result.Success(value))},
                     { error -> answer.setValue(Result.Failure(error))},
                     { println("Getting answer completed")}
                 )
