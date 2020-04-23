@@ -35,7 +35,7 @@ class AnswerFragment : Fragment() {
     }
 
     private val answerViewModel by lazy {
-        ViewModelProvider(this,
+        ViewModelProvider(viewModelStore,
             ViewModelFactory()
         ).get(AnswerViewModel::class.java)
     }
@@ -67,10 +67,10 @@ class AnswerFragment : Fragment() {
 
     private fun observeLiveData() {
         activity?.let {
-            answerViewModel.answer.observe(it, Observer { it ->
-                when (it) {
+            answerViewModel.answer.observe(it, Observer { result ->
+                when (result) {
                     is Result.Success -> {
-                        loadGifFromURL(it.value.image, requireContext(), answerGif)
+                        loadGifFromURL(result.value.imageUrl, requireContext(), answerGif)
                     }
                     is Result.Failure -> {
                         resolveAnswerLocally()

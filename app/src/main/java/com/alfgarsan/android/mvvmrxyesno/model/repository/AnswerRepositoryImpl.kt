@@ -1,4 +1,4 @@
-package com.alfgarsan.android.mvvmrxyesno.model.data.repository
+package com.alfgarsan.android.mvvmrxyesno.model.repository
 
 import com.alfgarsan.android.mvvmrxyesno.model.domain.Answer
 import com.alfgarsan.android.mvvmrxyesno.model.data.api.AnswerApiService
@@ -10,6 +10,6 @@ class AnswerRepositoryImpl(
 ) : AnswerRepository{
 
     override fun getAnswer(): Observable<Answer> {
-        return answerApiService.getAnswer()
+        return answerApiService.getAnswer().map { it.toDomain()}
     }
 }

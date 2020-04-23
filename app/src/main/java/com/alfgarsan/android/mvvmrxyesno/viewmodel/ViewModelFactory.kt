@@ -2,7 +2,7 @@ package com.alfgarsan.android.mvvmrxyesno.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.alfgarsan.android.mvvmrxyesno.model.data.repository.FactoryAnswerRepository
+import com.alfgarsan.android.mvvmrxyesno.model.repository.FactoryAnswerRepository
 
 /**
  * Factory for ViewModels

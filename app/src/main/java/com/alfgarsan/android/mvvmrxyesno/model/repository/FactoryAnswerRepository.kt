@@ -1,4 +1,4 @@
-package com.alfgarsan.android.mvvmrxyesno.model.data.repository
+package com.alfgarsan.android.mvvmrxyesno.model.repository
 
 import com.alfgarsan.android.mvvmrxyesno.model.data.api.AnswerApiService
 import com.alfgarsan.android.mvvmrxyesno.model.data.api.RetrofitClient

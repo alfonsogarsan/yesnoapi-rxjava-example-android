@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.alfgarsan.android.mvvmrxyesno.model.domain.Answer
 import com.alfgarsan.android.mvvmrxyesno.model.domain.Result
-import com.alfgarsan.android.mvvmrxyesno.model.data.repository.AnswerRepository
+import com.alfgarsan.android.mvvmrxyesno.model.repository.AnswerRepository
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
